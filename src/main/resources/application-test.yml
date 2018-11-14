@@ -1,0 +1,40 @@
+spring:
+    proflie: test
+    datasource:
+        url: jdbc:mysql://localhost:3306/downloader
+        username: root
+        password: root
+        platform: mysql
+        driverClassName: com.mysql.jdbc.Driver
+    jpa:
+        hibernate.ddl-auto: update
+        generate-ddl: true
+        show-sql: false
+
+
+
+management:
+    endpoint:
+        health:
+            show-details: ALWAYS
+        metrics:
+            enabled: true
+        prometheus:
+            enabled: true
+    endpoints:
+        web:
+            exposure:
+                include: '*'
+    security:
+        enabled: false
+    server:
+        address: 127.0.0.1
+    metrics.:
+        export.:
+            prometheus:
+                enabled: true
+logging:
+    level:
+        org.springframework.web: DEBUG
+        com.zaxxer: false
+        root: DEBUG
