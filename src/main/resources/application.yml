@@ -1,4 +1,5 @@
 spring:
+    proflie: test
     datasource:
         url: jdbc:mysql://localhost:3306/downloader
         username: root
@@ -16,11 +17,23 @@ endpoints:
 
 management:
      endpoint:
-          metrics:
+        metrics:
              enabled: true
+        prometheus:
+             enabled: true
+     endpoints:
+        web:
+             exposure:
+                 include: '*'
+        beans:
+             sensitive: false
+     metrics:
+        export:
+             prometheus:
+                 enabled: true
 
 logging:
     level:
         org.springframework.web: DEBUG
         com.zaxxer: false
-        root: DEBUG
+        root: INFO
