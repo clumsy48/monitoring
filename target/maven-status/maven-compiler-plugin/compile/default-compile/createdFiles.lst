@@ -1,1 +1,3 @@
-com/github/clumsy/Application.class
+com\github\clumsy\AppConfig.class
+com\github\clumsy\Application.class
+com\github\clumsy\MetricConfig.class

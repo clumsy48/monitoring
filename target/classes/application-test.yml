@@ -21,6 +21,6 @@ management:
 
 logging:
     level:
-        org.springframework.web: DEBUG
+        org.springframework.web: ERROR
         com.zaxxer: false
-        root: DEBUG
+        root: ERROR
